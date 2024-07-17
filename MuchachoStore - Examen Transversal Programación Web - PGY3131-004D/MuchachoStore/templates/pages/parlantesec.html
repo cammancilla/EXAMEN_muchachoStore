@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parlantes</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-image: url("../../static/img/background.jpg");
+    }
+</style>
+</head>
+
+<body onload="loadEventListenrs()">
+  {% include 'base/header.html'%}
+
+  <main>
+    <br>
+    <!-- Inicio cards -->
+    <h3 class="seccion"> Parlantes</h3>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <div class="products">
+        <div class="card">
+          <img src="{% static 'img/parlantee.png' %}" class="rounded mx-auto d-block" alt="cargando..." height="300px" width="300px">
+          <div class="card-body">
+            <h5 class="card-title">Parlante Bluetooth Akai abts-ms89</h5>
+            <p class="precio">$9.990 </p>
+            <button type="button" class="btn-add-cart" data-id="1">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="card">
+          <img src="{% static "img/parlante2.png" %}" class="rounded mx-auto d-block" alt="cargando..." height="300px" width="300px">
+          <div class="card-body">
+            <h5 class="card-title">Parlante Bluetooth src-xb100 negro</h5>
+            <p class="precio">$49.990</p>
+            <button type="button" class="btn-add-cart" data-id="2">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="card">
+          <img src="{% static 'img/parlante3.png' %}" class="rounded mx-auto d-block" alt=" cargando..." height="300px" width="300px">
+          <div class="card-body">
+            <h5 class="card-title">Parlante LG xboom go xg7qbk</h5>
+            <p class="precio">$99.990</p>
+            <button type="button" class="btn-add-cart" data-id="3">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="card">
+          <img src="{% static 'img/parlante4.png' %}" class="rounded mx-auto d-block" alt="cargando..." height="300px" width="300px">
+          <div class="card-body">
+            <h5 class="card-title">Parlante Bluetooth JBL Charge 5 Negro </h5>
+            <p class="precio">$159.990</p>
+            <button type="button" class="btn-add-cart" data-id="4">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Fin cards -->
+   
+  </main>
+  <script src="{% static 'js/carrito.js' %}"></script>
+  
+  {% include 'base/footer.html'%}
+</body>
+
+</html>
